@@ -42,11 +42,14 @@ html(lang="en")
                 .card.card-blue
                     h2 Triangle 
                     form
-                        label(for="inputTriangle1") Enter base:
+                        label(for="inputTriangle1") Enter side a:
                         input(type="number")#inputTriangle1
-                        label(for="inputTriangle2") Enter height:
+                        label(for="inputTriangle2") Enter side b:
                         input(type="number")#inputTriangle2
+                        label(for="inputTriangle3") Enter side c:
+                        input(type="number")#inputTriangle3
                     .buttons-container 
+                        button(onClick="perimeterTriangle()", type="button").button.button-triangle Calculate perimeter
                         button(onClick="areaTriangle()", type="button").button.button-triangle Calculate area
                     p.answer#triangleAnswer 0
 

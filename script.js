@@ -50,15 +50,43 @@ function areaSquare() {
 
 // Triangle Functions
 
-var calculateAreaTriangle = function(sideA, sideB) {
-    return (sideA * sideB) / 2;
+var calculatePerimeterTriangle = function(sideA, sideB, sideC) {
+    return sideA + sideB + sideC;
+}
+
+var calculateAreaTriangle = function(sideA, sideB, sideC) {
+    const semiPerimeter = (sideA + sideB + sideC) / 2;
+    return Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
+}
+
+function perimeterTriangle() {
+    const input1 = document.getElementById("inputTriangle1");
+    const input2 = document.getElementById("inputTriangle2");
+    const input3 = document.getElementById("inputTriangle3");
+    const value1 = parseInt(input1.value);
+    const value2 = parseInt(input2.value);
+    const value3 = parseInt(input3.value);
+    if (value1 + value2 > value3 && value1 + value3 > value2 && value2 + value3 > value1) {
+        const perimeter = calculatePerimeterTriangle(value1, value2, value3);
+        document.getElementById("triangleAnswer").innerHTML = perimeter.toFixed(1);
+    } else {
+        document.getElementById("triangleAnswer").innerHTML = "Impossible";
+    }
+    
 }
 
 function areaTriangle() {
     const input1 = document.getElementById("inputTriangle1");
     const input2 = document.getElementById("inputTriangle2");
+    const input3 = document.getElementById("inputTriangle3");
     const value1 = parseInt(input1.value);
     const value2 = parseInt(input2.value);
-    const area = calculateAreaTriangle(value1, value2);
-    document.getElementById("triangleAnswer").innerHTML = area.toFixed(1);
+    const value3 = parseInt(input3.value);
+    if (value1 + value2 > value3 && value1 + value3 > value2 && value2 + value3 > value1) {
+        const area = calculateAreaTriangle(value1, value2, value3);
+        document.getElementById("triangleAnswer").innerHTML = area.toFixed(1);
+    } else {
+        document.getElementById("triangleAnswer").innerHTML = "Impossible";
+    }
+    
 }

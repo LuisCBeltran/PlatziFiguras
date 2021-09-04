@@ -43,12 +43,15 @@
         <div class="card card-blue">
           <h2>Triangle </h2>
           <form>
-            <label for="inputTriangle1">Enter base:</label>
+            <label for="inputTriangle1">Enter side a:</label>
             <input type="number" id="inputTriangle1">
-            <label for="inputTriangle2">Enter height:</label>
+            <label for="inputTriangle2">Enter side b:</label>
             <input type="number" id="inputTriangle2">
+            <label for="inputTriangle3">Enter side c:</label>
+            <input type="number" id="inputTriangle3">
           </form>
           <div class="buttons-container"> 
+            <button class="button button-triangle" onClick="perimeterTriangle()" type="button">Calculate perimeter</button>
             <button class="button button-triangle" onClick="areaTriangle()" type="button">Calculate area</button>
           </div>
           <p class="answer" id="triangleAnswer">0</p>
