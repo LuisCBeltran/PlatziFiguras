@@ -1,0 +1,54 @@
+doctype html
+
+html(lang="en")
+
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="main.css")
+        script(src="script.js")
+        script(src="https://kit.fontawesome.com/399363a32d.js", crossorigin="anonymous")
+        title Perimeter and Area Calculator
+
+    body
+        header
+            .logo-container
+                i.fas.fa-circle
+                i.fas.fa-square 
+                i.fas.fa-play
+
+        main
+            h1 Perimeter and Area Calculator 
+            .cards-container 
+                .card.card-green
+                    h2 Circle 
+                    form
+                        label(for="inputCircle") Enter radius:
+                        input(type="number")#inputCircle  
+                    .buttons-container 
+                        button(onClick="perimeterCircle()", type="button").button.button-circle Calculate perimeter 
+                        button(onClick="areaCircle()", type="button").button.button-circle Calculate area
+                    p.answer#circleAnswer 0
+                .card.card-red
+                    h2 Square 
+                    form
+                        label(for="inputSquare") Enter side:
+                        input(type="number")#inputSquare 
+                    .buttons-container 
+                        button(onClick="perimeterSquare()", type="button").button.button-square Calculate perimeter 
+                        button(onClick="areaSquare()", type="button").button.button-square Calculate area
+                    p.answer#squareAnswer 0
+                .card.card-blue
+                    h2 Triangle 
+                    form
+                        label(for="inputTriangle1") Enter base:
+                        input(type="number")#inputTriangle1
+                        label(for="inputTriangle2") Enter height:
+                        input(type="number")#inputTriangle2
+                    .buttons-container 
+                        button(onClick="areaTriangle()", type="button").button.button-triangle Calculate area
+                    p.answer#triangleAnswer 0
+
+        footer
+            p Made by <a href="https://github.com/LuisCBeltran">Luis C. Beltrán</a> as part of his learning process.

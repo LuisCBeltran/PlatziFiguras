@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as v;
+
+footer {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+    a {
+        color: v.$black;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}

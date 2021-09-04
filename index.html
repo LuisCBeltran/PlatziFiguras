@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/399363a32d.js" crossorigin="anonymous"></script>
+    <title>Perimeter and Area Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container"><i class="fas fa-circle"></i><i class="fas fa-square"> </i><i class="fas fa-play"></i></div>
+    </header>
+    <main>
+      <h1>Perimeter and Area Calculator </h1>
+      <div class="cards-container"> 
+        <div class="card card-green">
+          <h2>Circle </h2>
+          <form>
+            <label for="inputCircle">Enter radius:</label>
+            <input type="number" id="inputCircle">
+          </form>
+          <div class="buttons-container"> 
+            <button class="button button-circle" onClick="perimeterCircle()" type="button">Calculate perimeter </button>
+            <button class="button button-circle" onClick="areaCircle()" type="button">Calculate area</button>
+          </div>
+          <p class="answer" id="circleAnswer">0</p>
+        </div>
+        <div class="card card-red">
+          <h2>Square </h2>
+          <form>
+            <label for="inputSquare">Enter side:</label>
+            <input type="number" id="inputSquare">
+          </form>
+          <div class="buttons-container"> 
+            <button class="button button-square" onClick="perimeterSquare()" type="button">Calculate perimeter </button>
+            <button class="button button-square" onClick="areaSquare()" type="button">Calculate area</button>
+          </div>
+          <p class="answer" id="squareAnswer">0</p>
+        </div>
+        <div class="card card-blue">
+          <h2>Triangle </h2>
+          <form>
+            <label for="inputTriangle1">Enter base:</label>
+            <input type="number" id="inputTriangle1">
+            <label for="inputTriangle2">Enter height:</label>
+            <input type="number" id="inputTriangle2">
+          </form>
+          <div class="buttons-container"> 
+            <button class="button button-triangle" onClick="areaTriangle()" type="button">Calculate area</button>
+          </div>
+          <p class="answer" id="triangleAnswer">0</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Made by <a href="https://github.com/LuisCBeltran">Luis C. Beltrán</a> as part of his learning process.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+@use '../abstracts/variables' as v;
+
+main {
+    display: grid;
+    place-items: center;
+    h1 {
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        width: 300px;
+    }
+    .cards-container {
+        margin-top: 40px;
+        display: grid;
+        gap: 40px;
+        @media only screen and (min-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "circle triangle"
+                                 "square triangle";
+            .card-green {
+                grid-area: circle;
+            }
+            .card-red {
+                grid-area: square;
+            }
+            .card-blue {
+                grid-area: triangle;
+                height: fit-content;
+            }
+        }
+        .card {
+            width: 300px;
+            border-radius: 8px; 
+            box-shadow: 0px 9px 11px 3px rgba(0,0,0,0.46);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                width: 250px;
+                margin-top: 30px;
+                font-size: 22px;
+                line-height: 24px;
+            }
+            form {
+                width: 250px;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                label {
+                    color: v.$grey;
+                }
+                input {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    height: 40px;
+                    border: 1px solid v.$grey;
+                    border-radius: 8px;
+                    font-size: 22px;
+                    font-weight: 700;
+                    text-align: end;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .buttons-container {
+                display: flex;
+                flex-direction: column;
+                .button {
+                    width: 180px;
+                    height: 35px;
+                    margin-bottom: 10px;
+                    border: none;
+                    border-radius: 8px;
+                    color: v.$white;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                .button-circle {
+                    background-color: v.$green;
+                    &:hover {
+                        background-color: v.$light-green;
+                        cursor: pointer;
+                    }
+                }
+                .button-square {
+                    background-color: v.$red;
+                    &:hover {
+                        background-color: v.$light-red;
+                        cursor: pointer;
+                    }
+                }
+                .button-triangle {
+                    background-color: v.$blue;
+                    &:hover {
+                        background-color: v.$light-blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .answer {
+                font-size: 30px;
+                font-weight: 700;
+                margin-top: 5px;
+                margin-bottom: 20px;
+            }
+        }
+        .card-green {
+            border-top: 4px solid v.$green;
+        }
+        .card-red {
+            border-top: 4px solid v.$red;
+        }
+        .card-blue {
+            border-top: 4px solid v.$blue;
+        }
+    }
+}

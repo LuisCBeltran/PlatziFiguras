@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as v;
+
+header {
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+        .logo-container {
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                .fas.fa-circle {
+                    font-size: 58px;
+                    color: v.$green;
+                }
+                .fas.fa-square {
+                    font-size: 64px;
+                    color: v.$red;
+                    margin-left: 8px;
+                }
+                .fas.fa-play {
+                    font-size: 56px;
+                    color: v.$blue;
+                    margin-left: 10px;
+                }
+        }
+}
+

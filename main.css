@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2e2e2e;
+  background-color: #fafafa;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+header .logo-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo-container .fas.fa-circle {
+  font-size: 58px;
+  color: #3ab322;
+}
+header .logo-container .fas.fa-square {
+  font-size: 64px;
+  color: #da1b27;
+  margin-left: 8px;
+}
+header .logo-container .fas.fa-play {
+  font-size: 56px;
+  color: #2589d6;
+  margin-left: 10px;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+main h1 {
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  width: 300px;
+}
+main .cards-container {
+  margin-top: 40px;
+  display: grid;
+  gap: 40px;
+}
+@media only screen and (min-width: 900px) {
+  main .cards-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "circle triangle" "square triangle";
+  }
+  main .cards-container .card-green {
+    grid-area: circle;
+  }
+  main .cards-container .card-red {
+    grid-area: square;
+  }
+  main .cards-container .card-blue {
+    grid-area: triangle;
+    height: fit-content;
+  }
+}
+main .cards-container .card {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 9px 11px 3px rgba(0, 0, 0, 0.46);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .cards-container .card h2 {
+  width: 250px;
+  margin-top: 30px;
+  font-size: 22px;
+  line-height: 24px;
+}
+main .cards-container .card form {
+  width: 250px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .cards-container .card form label {
+  color: #777777;
+}
+main .cards-container .card form input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: end;
+}
+main .cards-container .card form input:focus {
+  outline: none;
+}
+main .cards-container .card .buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+main .cards-container .card .buttons-container .button {
+  width: 180px;
+  height: 35px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 700;
+}
+main .cards-container .card .buttons-container .button-circle {
+  background-color: #3ab322;
+}
+main .cards-container .card .buttons-container .button-circle:hover {
+  background-color: #8ed380;
+  cursor: pointer;
+}
+main .cards-container .card .buttons-container .button-square {
+  background-color: #da1b27;
+}
+main .cards-container .card .buttons-container .button-square:hover {
+  background-color: #ee7981;
+  cursor: pointer;
+}
+main .cards-container .card .buttons-container .button-triangle {
+  background-color: #2589d6;
+}
+main .cards-container .card .buttons-container .button-triangle:hover {
+  background-color: #69aee4;
+  cursor: pointer;
+}
+main .cards-container .card .answer {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+main .cards-container .card-green {
+  border-top: 4px solid #3ab322;
+}
+main .cards-container .card-red {
+  border-top: 4px solid #da1b27;
+}
+main .cards-container .card-blue {
+  border-top: 4px solid #2589d6;
+}
+
+footer {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+footer a {
+  color: #2e2e2e;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=main.css.map */
